@@ -6,6 +6,12 @@ A-Frameの学習用レポジトリ
 
 # 学習記録メモ
 
+# 不明点
+
+a-assets
+
+a-sound
+
 ## 重力の実装
 
 Don McCurdy’s aframe-physics-system をアタッチすれば実装可。 [リンク](https://aframe.io/docs/0.8.0/introduction/html-and-primitives.html#attaching-components-to-primitives)
@@ -46,7 +52,7 @@ Don McCurdy’s aframe-physics-system をアタッチすれば実装可。 [リ�
 
 カーソルをカメラの子にすることで固定できる。
 
-###　VRインタラクティブ
+### VRインタラクティブ
 
 ```
 <a-box color="red" position="-10 2 -5" rotation="0 0 45" scale="2 2 2">
@@ -66,3 +72,16 @@ Don McCurdy’s aframe-physics-system をアタッチすれば実装可。 [リ�
 **click** : カーソルがオブジェクト上にある かつ クリックされた時
 
 これでインタラクティブなオブジェクトを作ることが出来る
+
+### Text
+
+```
+<a-text value="Hello, A-Frame!" color="#BBB"
+        position="-0.9 0.2 -3" scale="1.5 1.5 1.5"></a-text>
+```
+
+他のやり方もあるらしい
+
+- [Text Geometry](https://github.com/ngokevin/kframe/tree/master/components/text-geometry/) by Kevin Ngo - 3D text. More expensive to draw.
+
+- [HTML Shader](https://github.com/mayognaise/aframe-html-shader/) by Mayo Tobita - Render HTML as a texture. Easy to style, but can be slow to compute.
