@@ -8,9 +8,14 @@ A-Frameの学習用レポジトリ
 
 # 不明点
 
-a-assets
-
 a-sound
+
+## Asset Management System
+
+アセット機能が使えなかったのは、ローカルで実行してたから。
+
+gh-pagesで試してみると使えるので、前のwebVR実装と同様にgh-pagesで開発していく。
+
 
 ## 重力の実装
 
