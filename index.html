@@ -7,15 +7,20 @@
   <!--<script src="https://rawgit.com/aframevr/aframe/8e5f7b3/dist/aframe-master.min.js"></script>-->
   <script src="https://unpkg.com/aframe-physics-system@1.4.0/dist/aframe-physics-system.min.js"></script>
   <script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script>
+
 </head>
 
 <body>
   <a-scene>
     <a-sky src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/sechelt.jpg"></a-sky>
 
-    <a-box src="https://i.imgur.com/mYmmbrp.jpg" position="0 2 -5" rotation="0 45 45" scale="2 2 2">
+    <a-box color="red" position="-10 2 -5" rotation="0 0 45" scale="2 2 2">
       <a-animation attribute="position" to="0 2.2 -5" direction="alternate" dur="2000"
         repeat="indefinite"></a-animation>
+      <!-- These animations will start when the box is looked at. -->
+      <a-animation attribute="scale" begin="mouseenter" dur="300" to="3 3 3"></a-animation>
+      <a-animation attribute="scale" begin="mouseleave" dur="300" to="2 2 2"></a-animation>
+      <a-animation attribute="rotation" begin="click" dur="2000" to="360 405 45"></a-animation>
     </a-box>
 
     <a-camera>

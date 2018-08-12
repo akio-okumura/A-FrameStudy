@@ -6,7 +6,7 @@ A-Frameの学習用レポジトリ
 
 # 学習記録メモ
 
-### 重力の実装
+## 重力の実装
 
 Don McCurdy’s aframe-physics-system をアタッチすれば実装可。 [リンク](https://aframe.io/docs/0.8.0/introduction/html-and-primitives.html#attaching-components-to-primitives)
 
@@ -16,7 +16,7 @@ Don McCurdy’s aframe-physics-system をアタッチすれば実装可。 [リ�
 </a-scene>
 ```
 
-### environmentの変更
+## environmentの変更
 
 ```
 <a-scene>
@@ -36,7 +36,7 @@ Don McCurdy’s aframe-physics-system をアタッチすれば実装可。 [リ�
 
 <a-assets>を使うと上手く出来ないので、普通にsrcで指定するべき
 
-### カメラ
+## カメラ
 
 ```
 <a-camera>
@@ -45,3 +45,24 @@ Don McCurdy’s aframe-physics-system をアタッチすれば実装可。 [リ�
 ```
 
 カーソルをカメラの子にすることで固定できる。
+
+###　VRインタラクティブ
+
+```
+<a-box color="red" position="-10 2 -5" rotation="0 0 45" scale="2 2 2">
+  <a-animation attribute="position" to="0 2.2 -5" direction="alternate" dur="2000"
+    repeat="indefinite"></a-animation>
+  <!-- These animations will start when the box is looked at. -->
+  <a-animation attribute="scale" begin="mouseenter" dur="300" to="3 3 3"></a-animation>
+  <a-animation attribute="scale" begin="mouseleave" dur="300" to="2 2 2"></a-animation>
+  <a-animation attribute="rotation" begin="click" dur="2000" to="360 405 45"></a-animation>
+</a-box>
+```
+
+**mouseenter** : カーソルがオブジェクトに当たった時
+
+**mouseleave** : カーソルがオブジェクトから外れた時
+
+**click** : カーソルがオブジェクト上にある かつ クリックされた時
+
+これでインタラクティブなオブジェクトを作ることが出来る
