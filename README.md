@@ -35,3 +35,13 @@ Don McCurdy’s aframe-physics-system をアタッチすれば実装可。 [リ�
 360度画像をskyに指定すると出来る
 
 <a-assets>を使うと上手く出来ないので、普通にsrcで指定するべき
+
+### カメラ
+
+```
+<a-camera>
+  <a-cursor></a-cursor>
+</a-camera>
+```
+
+カーソルをカメラの子にすることで固定できる。
